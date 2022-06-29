@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es-ec">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Supermarket el Condando</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="Supermarket Web.styles.css" rel="stylesheet" />
+</head>
+
+<body>
+	<style>
+		.loading {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #1F2837;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 9999;
+			transition: 1s all;
+			opacity: 0;
+		}
+
+			.loading.show {
+				opacity: 1;
+			}
+
+			.loading .spin {
+				border: 3px solid hsla(185, 100%, 62%, 0.2);
+				border-top-color: #3cefff;
+				border-radius: 50%;
+				width: 3em;
+				height: 3em;
+				animation: spin 1s linear infinite;
+			}
+
+		@keyframes spin {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+	<div id="app">
+		<div class="loading show">
+			<div class="spin"></div>
+		</div>
+	</div>
+	<div id="blazor-error-ui">
+		Se ha producido un error no controlado.
+		<a href="" class="reload">Recargar</a>
+		<a class="dismiss">🗙</a>
+	</div>
+
+	<!-- Custom Js -->
+	<script src="_framework/blazor.webassembly.js"></script>
+	<script src="_content/BrowserInterop/scripts.js"></script>
+	<script src="js/firebase/firebase-app.js"></script>
+	<script src="js/firebase/firebase-database.js"></script>
+	<script src="js/firebase/firebase-auth.js"></script>
+	<script src="js/firebase/firebase-messaging.js"></script>
+	<script src="js/firebase/firebase-firestore.js"></script>
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/sweetalert2@9.js"></script>
+	<script src="js/admlocal.js"></script>
+</body>
+
+</html>
